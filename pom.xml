@@ -6,13 +6,18 @@
 
     <groupId>com.ilbluesky</groupId>
     <artifactId>open-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <gpg.keyname>张伟峰</gpg.keyname>
+        <plugin-nexus-staging.version>1.7.0</plugin-nexus-staging.version>
+        <plugin-javadoc.version>2.9.1</plugin-javadoc.version>
+        <plugin-source.version>2.2.1</plugin-source.version>
+        <plugin-gpg.version>1.5</plugin-gpg.version>
+        <plugin-central-publishing.version>0.4.0</plugin-central-publishing.version>
     </properties>
     <packaging>pom</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
@@ -53,17 +58,7 @@
             <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.4.0</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <publishingServerId>central</publishingServerId>
-                    <tokenAuth>true</tokenAuth>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.sonatype.central</groupId>
-                <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.4.0</version>
+                <version>${plugin-central-publishing.version}</version>
                 <extensions>true</extensions>
                 <configuration>
                     <publishingServerId>ossrh</publishingServerId>
@@ -75,7 +70,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.5</version>
+                <version>${plugin-gpg.version}</version>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
@@ -97,7 +92,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
+                <version>${plugin-source.version}</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -110,7 +105,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
+                <version>${plugin-javadoc.version}</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -123,7 +118,7 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.7</version>
+                <version>${plugin-nexus-staging.version}</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>ossrh</serverId>
