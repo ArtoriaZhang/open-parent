@@ -19,6 +19,11 @@ public class Asserts {
         }
     }
 
+    /**
+     * Throw runtime Exc if false
+     * @param bol condition
+     * @param msg Exception msg
+     */
     public static void beTrue(boolean bol, String msg) {
         if (!bol) {
             ExceptionUtils.throwException(msg);
