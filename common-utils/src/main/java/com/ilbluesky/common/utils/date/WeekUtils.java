@@ -6,22 +6,9 @@ import java.util.*;
 
 /**
  * @author Orca Zhang
- * @date 12/10/2024
+ * date 12/10/2024
  */
 public class WeekUtils {
-
-    public static void main(String[] args) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.WEEK_OF_YEAR, 50);
-        calendar.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
-
-        System.out.println(calendar.getTime());
-        calendar.set(Calendar.MONTH, 10);
-        Map r = getAllWeeks(calendar.getTime(), new Date(), 8, 30);
-
-        System.out.println(getAllWeeks(new Date(), new Date(), 8, 30));
-    }
-
 
     /**
      * Get current week of year.
@@ -42,7 +29,7 @@ public class WeekUtils {
         return getAllWeeks(start, end, 0, 0);
     }
     /**
-     * Get all weeks and each start day & end day of the week.
+     * Get all weeks and each start day and end day of the week.
      * @param start Start day.
      * @param end End day
      * @param hourOfDay Hour of the start day. Default 0. Can be 0 - 23.
