@@ -66,11 +66,11 @@ public class PdfFactory {
                             stream.endText();
                         }
                     }
-                    PDImageXObject pdImageXObject = PDImageXObject.createFromByteArray(document,
-                            bytes.toByteArray(), "png");
-                    stream.drawImage(pdImageXObject, 0, page.getPageHeight() - page.getBarcodeHeight(),
-                            page.getPageWidth(), page.getBarcodeHeight() - page.getGap());
-                    stream.close();
+                PDImageXObject pdImageXObject = PDImageXObject.createFromByteArray(document,
+                        bytes.toByteArray(), "png");
+                stream.drawImage(pdImageXObject, 0, page.getPageHeight() - page.getBarcodeHeight(),
+                        page.getPageWidth(), page.getBarcodeHeight() - page.getGap());
+                stream.close();
                 }
             document.save(os);
         } catch (Exception e) {
