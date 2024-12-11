@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.ilbluesky</groupId>
     <artifactId>open-parent-dependencies</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
 
     <description>Manage dependencies</description>
@@ -22,6 +22,7 @@
         <pdfbox.version>3.0.2</pdfbox.version>
         <jakarta-annotation.version>3.0.0</jakarta-annotation.version>
         <zxing.version>3.5.3</zxing.version>
+        <junit-jupiter.version>5.11.3</junit-jupiter.version>
     </properties>
 
     <dependencyManagement>
@@ -45,6 +46,12 @@
                 <groupId>com.google.zxing</groupId>
                 <artifactId>javase</artifactId>
                 <version>${zxing.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
