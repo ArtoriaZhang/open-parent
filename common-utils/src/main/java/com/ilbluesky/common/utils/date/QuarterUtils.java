@@ -99,8 +99,7 @@ public class QuarterUtils {
 
         yMArr = quarterEnd.split("-");
         cld.set(Calendar.YEAR, Integer.valueOf(yMArr[0]));
-        cld.set(Calendar.MINUTE, (Integer.valueOf(yMArr[1]) * 3));
-        cld.add(Calendar.MONTH, 1);
+        cld.set(Calendar.MONTH, (Integer.valueOf(yMArr[1]) * 3));
 
         result[1] = cld.getTime();
 
