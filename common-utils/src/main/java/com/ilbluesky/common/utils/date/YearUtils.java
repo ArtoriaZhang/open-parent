@@ -83,6 +83,7 @@ public class YearUtils {
 
         result[0] = cld.getTime();
 
+        cld.set(Calendar.YEAR, Integer.valueOf(yearEnd));
         cld.add(Calendar.YEAR, 1);
         result[1] = cld.getTime();
         cld.setTime(result[0]);
