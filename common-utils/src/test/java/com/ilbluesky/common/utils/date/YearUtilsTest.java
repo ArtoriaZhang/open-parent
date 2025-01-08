@@ -22,7 +22,7 @@ public class YearUtilsTest {
         result = YearUtils.getAllYears("2023", "2023");
         Assertions.assertTrue(result.size() == 1);
 
-        result = YearUtils.getAllYears("2020", null);
+        result = YearUtils.getAllYears("2020", "2024");
         Assertions.assertTrue(result.size() == 5);
 
         Assertions.assertThrows(RuntimeException.class, () -> YearUtils.getAllYears("22", null));

@@ -16,7 +16,7 @@ public class QuarterUtilsTest {
     public void testGetAllQuarters() {
         Map<String, Date[]> result = null;
 
-        result = QuarterUtils.getAllQuarters("2024-1", null);
+        result = QuarterUtils.getAllQuarters("2024-1", "2024-4");
         Assertions.assertTrue(result.size() == 4);
 
         result = QuarterUtils.getAllQuarters("2024-1", "2024-3");

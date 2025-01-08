@@ -9,7 +9,7 @@
         <version>1.0.1</version>
     </parent>
 
-    <version>1.0.5</version>
+    <version>1.0.6</version>
 
     <artifactId>common-utils</artifactId>
     <packaging>jar</packaging>
@@ -22,9 +22,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dependencies.version>1.0.2</dependencies.version>
         <junit.version>5.11.3</junit.version>
+        <slf4j.version>2.0.13</slf4j.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
