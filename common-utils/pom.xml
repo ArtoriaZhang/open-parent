@@ -20,7 +20,7 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <dependencies.version>1.0.2</dependencies.version>
+        <dependencies.version>1.0.3</dependencies.version>
         <junit.version>5.11.3</junit.version>
         <slf4j.version>2.0.13</slf4j.version>
     </properties>
@@ -35,6 +35,10 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
         </dependency>
     </dependencies>
 

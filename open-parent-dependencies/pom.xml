@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.ilbluesky</groupId>
     <artifactId>open-parent-dependencies</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <packaging>pom</packaging>
 
     <description>Manage dependencies</description>
@@ -23,6 +23,18 @@
         <jakarta-annotation.version>3.0.0</jakarta-annotation.version>
         <zxing.version>3.5.3</zxing.version>
         <junit-jupiter.version>5.11.3</junit-jupiter.version>
+        <mysql.version>9.0.0</mysql.version>
+        <oracle-ojdbc11.version>21.15.0.0</oracle-ojdbc11.version>
+        <nacos-client.version>2.0.1</nacos-client.version>
+        <nacos-cloud.version>2.2.3.RELEASE</nacos-cloud.version>
+        <springfox.version>3.0.0</springfox.version>
+        <mybatis-plus.version>3.5.3</mybatis-plus.version>
+        <orca-utils.version>1.0.6</orca-utils.version>
+        <hutool.version>5.8.23</hutool.version>
+        <javax-validation.version>2.0.1.Final</javax-validation.version>
+        <gson.version>2.10.1</gson.version>
+        <easyexcel.version>3.3.2</easyexcel.version>
+        <xxl-job.version>2.3.0</xxl-job.version>
     </properties>
 
     <dependencyManagement>
@@ -47,6 +59,77 @@
                 <artifactId>javase</artifactId>
                 <version>${zxing.version}</version>
             </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${javax-validation.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel-core</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.oracle.database.jdbc</groupId>
+                <artifactId>ojdbc11</artifactId>
+                <version>${oracle-ojdbc11.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${nacos-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${nacos-client.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
