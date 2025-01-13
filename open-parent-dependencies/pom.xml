@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.ilbluesky</groupId>
     <artifactId>open-parent-dependencies</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>pom</packaging>
 
     <description>Manage dependencies</description>
@@ -19,6 +19,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-boot-parent.version>3.1.12</spring-boot-parent.version>
         <pdfbox.version>3.0.2</pdfbox.version>
         <jakarta-annotation.version>3.0.0</jakarta-annotation.version>
         <zxing.version>3.5.3</zxing.version>
@@ -35,10 +36,22 @@
         <gson.version>2.10.1</gson.version>
         <easyexcel.version>3.3.2</easyexcel.version>
         <xxl-job.version>2.3.0</xxl-job.version>
+        <google-annotations.version>3.0.1</google-annotations.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.google.code.findbugs</groupId>
+                <artifactId>annotations</artifactId>
+                <version>${google-annotaions.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot-parent.version}</version>
+                <type>pom</type>
+            </dependency>
             <dependency>
                 <groupId>org.apache.pdfbox</groupId>
                 <artifactId>pdfbox</artifactId>
