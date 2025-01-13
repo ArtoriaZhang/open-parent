@@ -20,7 +20,8 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <dependencies.version>1.0.3</dependencies.version>
+        <dependencies.version>1.0.4</dependencies.version>
+        <boot-dependencies.version>3.1.12</boot-dependencies.version>
         <junit.version>5.11.3</junit.version>
         <slf4j.version>2.0.13</slf4j.version>
     </properties>
@@ -40,6 +41,10 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>annotations</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -48,6 +53,13 @@
                 <groupId>com.ilbluesky</groupId>
                 <artifactId>open-parent-dependencies</artifactId>
                 <version>${dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${boot-dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
