@@ -9,7 +9,7 @@
         <version>1.0.1</version>
     </parent>
 
-    <version>1.0.6</version>
+    <version>1.0.7</version>
 
     <artifactId>common-utils</artifactId>
     <packaging>jar</packaging>
@@ -20,7 +20,7 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <dependencies.version>1.0.4</dependencies.version>
+        <dependencies.version>1.0.5</dependencies.version>
         <boot-dependencies.version>3.1.12</boot-dependencies.version>
         <junit.version>5.11.3</junit.version>
         <slf4j.version>2.0.13</slf4j.version>
