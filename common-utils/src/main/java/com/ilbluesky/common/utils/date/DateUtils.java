@@ -9,6 +9,13 @@ import java.time.format.DateTimeFormatter;
  */
 public class DateUtils {
 
+    /**
+     * Common used format for {@link java.util.Date}
+     */
     public static final SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+    /**
+     * Common used format for {@link java.time.LocalDateTime}
+     */
     public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 }

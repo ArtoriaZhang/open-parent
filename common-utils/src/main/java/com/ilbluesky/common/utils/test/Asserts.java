@@ -15,8 +15,8 @@ public class Asserts {
 
     /**
      * Null then throw exception.
-     * @param tar
-     * @param msg
+     * @param tar Target
+     * @param msg Exception msg.
      */
     public static void notNull(Object tar, String msg) {
         if (tar == null) {
@@ -59,8 +59,8 @@ public class Asserts {
 
     /**
      *
-     * @param expression
-     * @param message
+     * @param expression ture of false expression.
+     * @param message Exception message.
      */
     public static void isTrue(boolean expression, String message) {
         if (!expression) {

@@ -37,8 +37,8 @@ public abstract class CollectionUtils {
      *
      * @param expectedSize Map size
      * @return HashMap instance.
-     * @param <K>
-     * @param <V>
+     * @param <K> The generic of key.
+     * @param <V> The generic of Value.
      */
     public static <K, V> HashMap<K, V> newHashMap(int expectedSize) {
         return new HashMap((int) ((float) expectedSize / 0.75F), 0.75F);

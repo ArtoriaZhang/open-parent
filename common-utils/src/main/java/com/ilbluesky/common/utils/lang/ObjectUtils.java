@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
  */
 public class ObjectUtils {
 
+    private ObjectUtils() {}
     /**
      *
      * @param array Object array
@@ -16,4 +17,13 @@ public class ObjectUtils {
         return array == null || array.length == 0;
     }
 
+    /**
+     * Test equal
+     * @param a Object a.
+     * @param b Object b.
+     * @return True if a.equals(b)
+     */
+    public static boolean equal(@Nullable Object a, @Nullable Object b) {
+        return a == b || a != null && a.equals(b);
+    }
 }
