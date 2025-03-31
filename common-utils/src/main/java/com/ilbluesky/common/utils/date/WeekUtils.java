@@ -8,7 +8,7 @@ import java.util.*;
  * @author Orca Zhang
  * date 12/10/2024
  */
-public class WeekUtils {
+public class WeekUtils extends DateUtils{
 
     /**
      * Get current week of year.
@@ -23,7 +23,7 @@ public class WeekUtils {
      * See also {@link #getAllWeeks(Date, Date, Integer, Integer)}
      * @param start
      * @param end
-     * @return
+     * @return Map with weeks
      */
     public static Map<Integer, Date[]> getAllWeeks(Date start, Date end) {
         return getAllWeeks(start, end, 0, 0);
@@ -38,15 +38,11 @@ public class WeekUtils {
      */
     public static Map<Integer, Date[]> getAllWeeks(Date start, Date end, Integer hourOfDay, Integer minuteOfHour) {
 
-        Asserts.notNull(start, String.format("Start date can not be null."));
-
         Calendar cal = Calendar.getInstance();
-        if (end == null) {
-            end = cal.getTime();
-        }
 
-        Asserts.beTrue(start.getTime() < end.getTime(), String.format("Start day[%s] must less than end day[%s].",
-                start, end));
+        end = end == null ? new Date() : end;
+
+        checkDate(cal, start, end);
 
         LinkedHashMap<Integer, Date[]> result = new LinkedHashMap<>();
 
@@ -78,8 +74,4 @@ public class WeekUtils {
         calcWeeks(cal, result, end);
     }
 
-    private static void setHourMinute(Calendar cal, Integer hourOfDay, Integer minuteOfHour) {
-        cal.set(Calendar.HOUR_OF_DAY, hourOfDay == null ? 0 : hourOfDay);
-        cal.set(Calendar.MINUTE, minuteOfHour == null ? 0 : minuteOfHour);
-    }
 }
