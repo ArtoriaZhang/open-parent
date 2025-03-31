@@ -9,7 +9,7 @@
         <version>1.0.1</version>
     </parent>
 
-    <version>1.0.10</version>
+    <version>1.0.11</version>
 
     <artifactId>common-utils</artifactId>
     <packaging>jar</packaging>

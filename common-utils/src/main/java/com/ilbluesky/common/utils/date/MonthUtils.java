@@ -48,9 +48,6 @@ public class MonthUtils extends DateUtils{
      * @param result Final result Map.
      */
     private static void calMonth(Calendar cal, Date start, Date end, Map<Integer, Date[]> result) {
-        if (start.compareTo(end) >= 0) {
-            return;
-        }
 
         Integer month = cal.get(Calendar.MONTH);
         Date[] tmp = new Date[2];
@@ -58,6 +55,10 @@ public class MonthUtils extends DateUtils{
         tmp[0] = start;
         cal.add(Calendar.MONTH, 1);
         tmp[1] = cal.getTime();
+
+        if (start.compareTo(end) >= 0) {
+            return;
+        }
         calMonth(cal, tmp[1], end, result);
     }
 
