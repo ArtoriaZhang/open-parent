@@ -43,7 +43,7 @@ public class DateUtils {
     protected static void checkDate(Calendar cal, Date start, Date end) {
         Asserts.notNull(start, String.format("Start date can not be null."));
 
-        Asserts.beTrue(start.getTime() < end.getTime(), String.format("Start day[%s] must less than end day[%s].",
+        Asserts.beTrue(start.getTime() <= end.getTime(), String.format("Start day[%s] must less than end day[%s].",
                 start, end));
 
     }
