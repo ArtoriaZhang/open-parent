@@ -47,4 +47,36 @@ public class DateUtils {
                 start, end));
 
     }
+
+    /**
+     * Get the start time of a day. 00:00:00
+     * @param source Source date
+     * @return Same day as source but with 00:00:00
+     */
+    public static Date getDate(Date source) {
+        if (source == null) {
+            return null;
+        }
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(source);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        return calendar.getTime();
+    }
+
+    /**
+     * Simply add one day to source date.
+     * @param source Source date.
+     * @return Source date + 1 day.
+     */
+    public static Date addOneDay(Date source) {
+        if (source == null) {
+            return null;
+        }
+        Calendar c = Calendar.getInstance();
+        c.setTime(source);
+        c.add(Calendar.DAY_OF_MONTH, 1);
+        return c.getTime();
+    }
 }
