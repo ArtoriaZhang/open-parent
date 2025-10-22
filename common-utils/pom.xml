@@ -8,8 +8,8 @@
         <artifactId>open-parent</artifactId>
         <version>1.0.1</version>
     </parent>
-
-    <version>1.0.13</version>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <version>1.0.14</version>
 
     <artifactId>common-utils</artifactId>
     <packaging>jar</packaging>
