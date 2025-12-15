@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  * @author Orca Zhang
- * @date 7/23/2021
+ * date 7/23/2021
  **/
 public class R<T> {
 
