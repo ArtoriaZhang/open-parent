@@ -9,7 +9,7 @@
         <version>1.0.1</version>
     </parent>
     <name>${project.groupId}:${project.artifactId}</name>
-    <version>1.0.14</version>
+    <version>1.0.15</version>
 
     <artifactId>common-utils</artifactId>
     <packaging>jar</packaging>
@@ -27,6 +27,10 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
