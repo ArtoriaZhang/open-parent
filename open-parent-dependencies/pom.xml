@@ -10,9 +10,9 @@
     </parent>
     <groupId>com.ilbluesky</groupId>
     <artifactId>open-parent-dependencies</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <packaging>pom</packaging>
-
+    <name>${project.groupId}:${project.artifactId}</name>
     <description>Manage dependencies</description>
 
     <properties>
@@ -37,10 +37,23 @@
         <easyexcel.version>3.3.2</easyexcel.version>
         <xxl-job.version>2.3.0</xxl-job.version>
         <google-annotations.version>3.0.1</google-annotations.version>
+        <mockito.version>5.20.0</mockito.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-junit-jupiter</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
             <dependency>
                 <groupId>com.google.code.findbugs</groupId>
                 <artifactId>annotations</artifactId>
